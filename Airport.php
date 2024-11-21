@@ -1,8 +1,13 @@
 <?php
+class Airport {
+    public function __construct(
+        public $iatacods,    // IATA kods (lidostas kods)
+        public $platumagradi, // platums
+        public $garumagradi  // garums
+    ) {}
 
-class Airport{
-    public function __construct(public $iatacods,
-                                public $platumagradi,
-                                public $garumagradi, ){}
-
+    public function __toString() {
+        return "{$this->iatacods} ({$this->platumagradi}, {$this->garumagradi})";
+    }
 }
+?>
